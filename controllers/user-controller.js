@@ -30,6 +30,7 @@ const userController = {
       .populate({
         path: "Thoughts",
         select: "-__v",
+        populate: { path: "reactions" },
       })
       .select("-__v")
       .then((dbUserData) => {
@@ -54,7 +55,7 @@ const userController = {
 
   // update user by id
   updateUser({ params, body }, res) {
-    User.findOneAndUpdate({ _id: params.userId }, body, {
+    User.findOneAndUpdate({ _id: params.id }, body, {
       new: true,
       runValidators: true,
     })
@@ -85,7 +86,7 @@ const userController = {
     Users.findOneAndUpdate(
       { _id: params._id },
       { $push: { friends: params.friendId } },
-      { new: true }
+      { new: true, runValidators: true }
     )
       .populate({ path: "friends", select: "-__v" })
       .select("-__v")

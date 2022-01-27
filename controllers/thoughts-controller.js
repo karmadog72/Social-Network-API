@@ -38,11 +38,11 @@ const thoughtsController = {
       });
   },
   // create thoughts
-  createThoughts({ params, body }, res) {
+  createThoughts({ body }, res) {
     Thoughts.create(body)
       .then(({ _id }) => {
         return User.findOneAndUpdate(
-          { _id: params.userId },
+          { _id: body.userId },
           { $push: { Thoughts: _id } },
           { new: true }
         );
@@ -65,7 +65,7 @@ const thoughtsController = {
 
   // update thoughts by id
   updateThoughts({ params, body }, res) {
-    Thoughts.findOneAndUpdate({ _id: params.thoughtsId }, body, {
+    Thoughts.findOneAndUpdate({ _id: params.id }, body, {
       new: true,
       runValidators: true,
     })
@@ -83,7 +83,7 @@ const thoughtsController = {
 
   // delete thoughts
   deleteThoughts({ params }, res) {
-    Thoughts.findOneAndDelete({ _id: params.thoughtsId })
+    Thoughts.findOneAndDelete({ _id: params.id })
       .then((dbThoughtsData) => {
         if (!dbThoughtsData) {
           res
