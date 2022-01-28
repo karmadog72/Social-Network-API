@@ -1,6 +1,9 @@
 # Social-Network-API
 Social Network API- A social network web application where users can share their thoughts, react to friends’ thoughts, and create a friend list.
 
+  ## Video Walk Through
+https://watch.screencastify.com/v/0sQMP8CZHZAzpB7CfyJC
+
   # Table of Contents
   1. [Description](#project-description)
   3. [Installation](#installation)
@@ -16,8 +19,6 @@ Social Network API- A social network web application where users can share their
   OR
   See all of my work at GitHub [${data.github}](https://github.com/karmadog72)
   
-  ## Video Walk Through
-  ![Video-Link](https://watch.screencastify.com/v/0sQMP8CZHZAzpB7CfyJC)
 
   ## Image Example
   ![image](https://user-images.githubusercontent.com/89046934/151610590-48a3a2e5-14f2-4065-bc00-d775afc98457.png)
