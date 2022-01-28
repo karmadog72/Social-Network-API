@@ -15,9 +15,9 @@ https://watch.screencastify.com/v/0sQMP8CZHZAzpB7CfyJC
   * Run through CRUD routes on Insomnia
   
   ## Questions
-  If you have any questions you can email me at https://www.linkedin.com/in/danika-pearson/
+  If you have any questions you can email me at [![linkedin](https://www.linkedin.com/in/danika-pearson/)
   OR
-  See all of my work at GitHub (https://github.com/karmadog72)
+  See all of my work at GitHub https://github.com/karmadog72
   
 
   ## Image Example
